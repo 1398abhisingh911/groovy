@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http
+spec:
+  selector:
+    matchLabels:
+      env: production
+
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        env: production
+
+    spec:
+      containers:
+      - name: http
+        image: 1398abhisingh911/httpd:v1
+
+        ports:
+        - containerPort: 80
+
+        volumeMounts:
+          - name: http-vol
+            mountPath: /usr/local/apache2/htdocs
+
+      volumes:
+      - name: http-vol
+        persistentVolumeClaim:
+          claimName: web-pvc
+
+    
