@@ -1,17 +1,11 @@
 job("1 Git Pull") {
   description("Pulls Code From GitHub Repository")  
   
- scm {
-        git {
-            remote {
-               1398abhisingh911/groovy
-                branch "master"
-            }
-            }
-        }
-    }
-
-  triggers {
+  
+  scm {
+    github("1398abhisingh911/groovy", "master") 
+  }
+ triggers {
     githubPush()
   }
 }
