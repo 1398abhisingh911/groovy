@@ -2,7 +2,7 @@ job("1 Git Pull") {
   description("Pulls Code From GitHub Repository")  
   
   scm {
-    github("1398abhisingh911/tasksec", "master") 
+    github("398abhisingh911/groovy", "master") 
   }
 
   triggers {
