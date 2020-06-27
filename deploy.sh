@@ -21,6 +21,6 @@ then
     kubectl cp ../1-Git-Pull/*.html $(kubectl get pods -o=jsonpath='{.items[0].metadata.name}'):/usr/local/apache2/htdocs
 
   else
-    kubectl cp ../1-Git-Pull/*.html $(kubectl get pods -o=jsonpath='{.items[0].metadata.name}'):/usr//
+    kubectl cp ../1-Git-Pull/*.html $(kubectl get pods -o=jsonpath='{.items[0].metadata.name}'):/usr/local/apache2/htdocs
   fi
 
