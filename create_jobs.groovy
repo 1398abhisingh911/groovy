@@ -4,7 +4,7 @@ job("1 Git Pull") {
   scm {
     github("1398abhisingh911
 /
-tasksec", "master") 
+groovy", "master") 
   }
 
   triggers {
