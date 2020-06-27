@@ -46,12 +46,4 @@ job("4 Send Mail") {
   }
 }
 
-buildPipelineView("K8s Deploy WebApp") {
-  title("k8s job")
-  description("Code done")
-  selectedJob("1 Git Pull")
-  alwaysAllowManualTrigger(true)
-  refreshFrequency(3)
-  displayedBuilds(1)
-  showPipelineParameters(true)
-}
+
